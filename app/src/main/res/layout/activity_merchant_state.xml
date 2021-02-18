@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <include layout="@layout/main_title_bar" android:id="@+id/one"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/one"
+        android:layout_marginTop="10dp"
+        android:text=".“|2间” 表示库存两间， “--”表示无库存"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/one"
+        android:text=".“O”表示关房，可点击格子开房"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText" />
+
+    <com.example.ly.Across_Vertical.VHTableView
+        android:id="@+id/vht_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/one"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+    </com.example.ly.Across_Vertical.VHTableView>
+</RelativeLayout>

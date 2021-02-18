@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ly">
+    <!-- 权限：接收短信 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".My.Activity.Merchant_Data"></activity>
+        <activity android:name=".Across_Vertical.Merchant_State_Activity" />
+        <activity android:name=".My.Activity.Merchant_Order" />
+        <activity android:name=".My.Activity.Set_Add" />
+        <activity android:name=".My.Activity.Set_Check" />
+        <activity android:name=".My.Activity.My_Merchant" />
+        <activity android:name=".My.Activity.My_Set" />
+        <activity android:name=".My.Activity.My_Pshome" />
+        <activity android:name=".My.Activity.My_Data" />
+        <activity android:name=".Register_Login.Change_Password" />
+        <activity android:name=".Register_Login.Retrieve_Password" />
+        <activity android:name=".Register_Login.Bind_Phone" />
+        <activity android:name=".Register_Login.Register_Phone" />
+        <activity android:name=".Register_Login.Register_Account" />
+        <activity android:name=".Register_Login.Register_Way" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6E6"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_title_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#000000" />
+
+    <!--头像-->
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="头像"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/data_autonym"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/data_head"
+            android:background="@drawable/angle_corner"
+            android:gravity="center"
+            android:text="未实名"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/data_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/icon_wx"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+
+    <!--用户昵称-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="用户昵称"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/data_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:text="旅影"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:background="@null"
+            android:textCursorDrawable="@null"
+            tools:ignore="HardcodedText,LabelFor,RelativeOverlap" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+    <!--性别-->
+    <RelativeLayout
+        android:id="@+id/sex"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="性别"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/data_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:text="男"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,LabelFor,RelativeOverlap" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+    <!--出生年月-->
+    <RelativeLayout
+        android:id="@+id/birth"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="出生年月"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/data_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:text="1996-11-30"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,LabelFor,RelativeOverlap" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+    <!--出生年月-->
+    <RelativeLayout
+        android:id="@+id/hobby"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="爱好"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/data_hobby_three"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/angle_corner"
+            android:gravity="center"
+            android:text="风景"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/data_hobby_two"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/data_hobby_three"
+            android:background="@drawable/angle_corner"
+            android:gravity="center"
+            android:text="名宿"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/data_hobby_one"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/data_hobby_two"
+            android:background="@drawable/angle_corner"
+            android:gravity="center"
+            android:text="古装"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+
+</LinearLayout>

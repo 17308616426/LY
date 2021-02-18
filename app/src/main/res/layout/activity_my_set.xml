@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".My.Activity.My_Set"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_title_bar"/>
+
+    <!--收货地址设置-->
+    <RelativeLayout
+        android:id="@+id/site"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/angle_updown">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="收货地址设置"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/data_head"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/return_right"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <!--入住人设置-->
+    <RelativeLayout
+        android:id="@+id/check_person"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/angle_updown">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="入住人设置"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/return_right"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <!--修改密码-->
+    <RelativeLayout
+        android:id="@+id/change_psw"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/angle_updown">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="修改密码"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/return_right"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+
+    <!--关于我们-->
+    <RelativeLayout
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/angle_updown">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="关于我们"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/return_right"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+
+    <!--清除缓存-->
+    <RelativeLayout
+        android:id="@+id/sweep_cache"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/angle_updown">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="清除缓存"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/return_right"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <!--切换账号-->
+    <RelativeLayout
+        android:id="@+id/switch_account"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/angle_updown">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="切换账号"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/return_right"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/exit_register"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@drawable/account_button"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="退出登录"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

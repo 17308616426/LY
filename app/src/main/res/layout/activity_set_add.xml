@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".My.Activity.Set_Add">
+
+    <include layout="@layout/main_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="真实姓名:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/name"
+            android:background="#F2F2"
+            android:hint="请输入名字"
+            android:textColorHint="#FFFFFF"
+            tools:ignore="Autofill,HardcodedText,LabelFor,RelativeOverlap,TextFields" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="身份证号:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/et_cart"
+            android:layout_width="232dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toStartOf="@+id/qw"
+            android:layout_toLeftOf="@+id/qw"
+            android:layout_toEndOf="@+id/card"
+            android:background="#F2F2"
+            android:hint="请输入身份证"
+            android:inputType="number"
+            android:textColorHint="#FFFFFF"
+            tools:ignore="Autofill,HardcodedText,LabelFor,RelativeOverlap,RtlHardcoded,UnknownIdInLayout" />
+
+        <ImageView
+            android:id="@+id/iv_qw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/my_14"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="手机号:"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/phone"
+            android:background="#F2F2"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:textColorHint="#FFFFFF"
+            tools:ignore="Autofill,HardcodedText,LabelFor,RelativeOverlap,RtlHardcoded,TextFields" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/phone_button"
+        android:layout_gravity="center"
+        android:text="保存"
+        tools:ignore="HardcodedText" />
+</LinearLayout>
