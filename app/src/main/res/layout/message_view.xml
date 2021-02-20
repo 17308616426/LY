@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:text="消息中心"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:id="@+id/rl_system"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_one"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/angle_circle"
+            android:src="@drawable/my_2"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_one"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/iv_one"
+            android:text="系统通知"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+        <TextView
+            android:id="@+id/tv_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_two"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/iv_one"
+            android:text="您有一条新的系统消息"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/my_2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_me"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_three"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/angle_circle"
+            android:src="@drawable/my_2"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/tv_fore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_three"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/iv_three"
+            android:text=" @我的"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+        <TextView
+            android:id="@+id/tv_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_fore"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/iv_three"
+            android:text="您有新的用户@了我"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/my_2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_serve"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_five"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/angle_circle"
+            android:src="@drawable/my_2"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/tv_six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_five"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/iv_five"
+            android:text="服务通知"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+        <TextView
+            android:id="@+id/tv_serve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_six"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/iv_five"
+            android:text="您有新的订单消息"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/my_2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_service"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_seven"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/angle_circle"
+            android:src="@drawable/my_2"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/tv_seven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_seven"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/iv_seven"
+            android:text="客服"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+        <TextView
+            android:id="@+id/tv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_seven"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/iv_seven"
+            android:text="您有新的商家消息"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText,SmallSp" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/my_2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+
+
+
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="55dp"
+        android:divider="#000000"
+        android:dividerHeight="1dp"
+        />
+
+</LinearLayout>

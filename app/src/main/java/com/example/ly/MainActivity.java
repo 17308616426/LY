@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ly.Message.Message_View;
 import com.example.ly.My.My_View;
 
 
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private long exitTime;
+    private Message_View message_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 bottom_find_picture.setImageResource(R.drawable.bottom_find);
                 break;
             case 2:
-                title_bar.setVisibility(View.VISIBLE);
+                title_bar.setVisibility(View.GONE);
                 title_text.setText("订单");
                 bottom_list.setSelected(true);
                 bottom_list_word.setTextColor(Color.parseColor("#0097f7"));
@@ -179,7 +181,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //发现
                 break;
             case 2:
-                //订单
+                //消息
+                if (message_view==null){
+                    message_view = new Message_View(this);
+                    body.addView(message_view.getView());
+                }else {
+                    message_view.getView();
+                }
+                message_view.showView();
                 break;
             case 3:
                 //我的
