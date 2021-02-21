@@ -6,13 +6,19 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.example.ly.Across_Vertical.Merchant_State_Activity;
+import com.example.ly.Notch.NotchFit;
+import com.example.ly.Notch.args.NotchProperty;
+import com.example.ly.Notch.args.NotchScreenType;
+import com.example.ly.Notch.core.OnNotchCallBack;
+import com.example.ly.Notch.utils.SizeUtils;
 import com.example.ly.R;
 import com.example.ly.CircleImageViewDrawable;
 
@@ -31,6 +37,8 @@ public class My_Merchant extends AppCompatActivity {
     private RelativeLayout data_statistics;
     private TextView go_back;
     private TextView title_text;
+    private RelativeLayout title_bar;
+    private ConstraintLayout linearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +46,29 @@ public class My_Merchant extends AppCompatActivity {
         setContentView(R.layout.activity_my_merchant);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         init();
+
+        NotchFit.fit(this, NotchScreenType.TRANSLUCENT, new OnNotchCallBack() {
+            @Override
+            public void onNotchReady(NotchProperty notchProperty) {
+                int fitSize;
+                if(notchProperty.isNotchEnable()){
+                    fitSize = notchProperty.getNotchHeight();
+                }
+                else {
+                    fitSize = SizeUtils.getStatusBarHeight(My_Merchant.this);
+                }
+
+                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) linearLayout.getLayoutParams();
+                marginLayoutParams.topMargin = fitSize;
+                linearLayout.requestLayout();
+            }
+        });
+
     }
 
     private void init() {
+        linearLayout = (ConstraintLayout) findViewById(R.id.linearLayout2);
+        title_bar = (RelativeLayout) findViewById(R.id.title_bar);
         go_back = (TextView) findViewById(R.id.go_back);
         go_back.setVisibility(View.VISIBLE);
         go_back.setOnClickListener(new View.OnClickListener() {
@@ -73,22 +101,6 @@ public class My_Merchant extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(My_Merchant.this, Merchant_Order.class);
-                startActivity(intent);
-            }
-        });
-
-        house_manage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(My_Merchant.this, Merchant_State_Activity.class);
-                startActivity(intent);
-            }
-        });
-
-        data_statistics.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(My_Merchant.this, Merchant_Data.class);
                 startActivity(intent);
             }
         });

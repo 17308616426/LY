@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -19,6 +20,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ly.Message.Message_View;
 import com.example.ly.My.My_View;
+import com.example.ly.Notch.NotchFit;
+import com.example.ly.Notch.args.NotchProperty;
+import com.example.ly.Notch.args.NotchScreenType;
+import com.example.ly.Notch.core.OnNotchCallBack;
+import com.example.ly.Notch.utils.SizeUtils;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
