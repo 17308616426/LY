@@ -1,37 +1,29 @@
 package com.example.ly.My;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.util.AttributeSet;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.ly.MainActivity;
+import com.example.ly.CircleImageViewDrawable;
 import com.example.ly.My.Activity.My_Merchant;
 import com.example.ly.My.Activity.My_Pshome;
 import com.example.ly.My.Activity.My_Set;
-import com.example.ly.Notch.NotchFit;
-import com.example.ly.Notch.args.NotchProperty;
-import com.example.ly.Notch.args.NotchScreenType;
-import com.example.ly.Notch.core.OnNotchCallBack;
-import com.example.ly.Notch.utils.SizeUtils;
 import com.example.ly.R;
 
 
-public class My_View extends AppCompatActivity {
+public class My_View {
     private Activity mContext;
     private LayoutInflater mInflater;
     private View view;
@@ -41,7 +33,7 @@ public class My_View extends AppCompatActivity {
     private TextView user_name;
     private TextView sign_in;
     private TextView compile_data;
-    private ImageView information;
+    private ImageView drawer;
     private TextView balance;
     private TextView integral;
     private TextView coupons;
@@ -66,6 +58,7 @@ public class My_View extends AppCompatActivity {
     private RelativeLayout set;
     private Resources resources;
     private ScrollView all;
+    private DrawerLayout drawerLayout;
 
 
     //构造函数
@@ -93,7 +86,7 @@ public class My_View extends AppCompatActivity {
 
     //“我的”页面
     private void init() {
-        view = mInflater.inflate(R.layout.my_bottom, null);
+        view = mInflater.inflate(R.layout.my_view, null);
         view.setVisibility(View.VISIBLE);
 //        all = (ScrollView) view.findViewById(R.id.all);
         background = (RelativeLayout) view.findViewById(R.id.background);        //背景
@@ -101,7 +94,7 @@ public class My_View extends AppCompatActivity {
         user_name = (TextView) view.findViewById(R.id.user_name);           //名字
         sign_in = (TextView) view.findViewById(R.id.sign_in);               //按钮：签到
         compile_data = (TextView) view.findViewById(R.id.compile_data);     //按钮：编辑资料
-        information = (ImageView) view.findViewById(R.id.information);      //图标：消息
+        drawer = (ImageView) view.findViewById(R.id.drawer);      //图标：抽屉
         balance = (TextView) view.findViewById(R.id.balance);               //余额充值
         integral = (TextView) view.findViewById(R.id.integral);             //我的积分
         coupons = (TextView) view.findViewById(R.id.coupons);               //优惠券
@@ -129,10 +122,9 @@ public class My_View extends AppCompatActivity {
         message = (RelativeLayout) view.findViewById(R.id.message);               //常用信息
         set = (RelativeLayout) view.findViewById(R.id.set);                       //设置
 
-        //设置圆头！！报错
-//        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.icon_wx);
-//        CircleImageViewDrawable drawble = new CircleImageViewDrawable(bitmap);
-//        head.setImageDrawable(drawble);
+        drawerLayout = (DrawerLayout) view.findViewById(R.id.drawerLayout);
+
+
 
         set.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,6 +152,13 @@ public class My_View extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, My_Merchant.class);
                 mContext.startActivity(intent);
+            }
+        });
+        //点击显示抽屉
+        drawer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(Gravity.RIGHT);
             }
         });
     }
