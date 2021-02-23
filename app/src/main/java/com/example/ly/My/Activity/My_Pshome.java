@@ -7,6 +7,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -16,6 +18,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ly.Notch.NotchFit;
+import com.example.ly.Notch.args.NotchProperty;
+import com.example.ly.Notch.args.NotchScreenType;
+import com.example.ly.Notch.core.OnNotchCallBack;
+import com.example.ly.Notch.utils.SizeUtils;
 import com.example.ly.R;
 import com.example.ly.CircleImageViewDrawable;
 import com.example.ly.My.View.PH_View;
@@ -43,6 +50,7 @@ public class My_Pshome extends AppCompatActivity implements View.OnClickListener
     private ImageView img_small;
     private ImageView img_short;
     private PH_View mCourseView;
+    private LinearLayout rl_all;
 
 
     @Override
@@ -51,6 +59,26 @@ public class My_Pshome extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_my_personal_home);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         init();
+
+        //用户自己定义显示样式(普通屏状态栏适配)   下面就是刘海屏的适配
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        NotchFit.fit(this, NotchScreenType.TRANSLUCENT, new OnNotchCallBack() {
+            @Override
+            public void onNotchReady(NotchProperty notchProperty) {
+                int fitSize;
+                if(notchProperty.isNotchEnable()){
+                    fitSize = notchProperty.getNotchHeight();
+                }
+                else {
+                    fitSize = SizeUtils.getStatusBarHeight(My_Pshome.this);
+                }
+
+                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) rl_all.getLayoutParams();
+                marginLayoutParams.topMargin = fitSize;
+                rl_all.requestLayout();
+            }
+        });
+
 
         setListener();    //批量事件监听
         setInitStatus();  //进去就是主页面
@@ -69,6 +97,7 @@ public class My_Pshome extends AppCompatActivity implements View.OnClickListener
     }
 
     private void init() {
+        rl_all = (LinearLayout) findViewById(R.id.rl_all);
         go_back = (TextView) findViewById(R.id.go_back);
         go_back.setVisibility(View.VISIBLE);
         go_back.setOnClickListener(new View.OnClickListener() {

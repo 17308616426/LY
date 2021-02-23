@@ -6,8 +6,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +33,9 @@ public class SplashActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         init();
 
+
+        //用户自己定义显示样式(普通屏状态栏适配)   下面就是刘海屏的适配
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         NotchFit.fit(this, NotchScreenType.TRANSLUCENT, new OnNotchCallBack() {
             @Override
             public void onNotchReady(NotchProperty notchProperty) {
@@ -49,7 +52,6 @@ public class SplashActivity extends AppCompatActivity {
                 v.requestLayout();
             }
         });
-
     }
 
 

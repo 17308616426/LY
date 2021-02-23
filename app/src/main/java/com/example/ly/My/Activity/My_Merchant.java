@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ import com.example.ly.Notch.core.OnNotchCallBack;
 import com.example.ly.Notch.utils.SizeUtils;
 import com.example.ly.R;
 import com.example.ly.CircleImageViewDrawable;
+import com.example.ly.SplashActivity;
 
 public class My_Merchant extends AppCompatActivity {
 
@@ -47,6 +49,8 @@ public class My_Merchant extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         init();
 
+        //用户自己定义显示样式(普通屏状态栏适配)   下面就是刘海屏的适配
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         NotchFit.fit(this, NotchScreenType.TRANSLUCENT, new OnNotchCallBack() {
             @Override
             public void onNotchReady(NotchProperty notchProperty) {
@@ -58,9 +62,9 @@ public class My_Merchant extends AppCompatActivity {
                     fitSize = SizeUtils.getStatusBarHeight(My_Merchant.this);
                 }
 
-                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) linearLayout.getLayoutParams();
+                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) head.getLayoutParams();
                 marginLayoutParams.topMargin = fitSize;
-                linearLayout.requestLayout();
+                head.requestLayout();
             }
         });
 

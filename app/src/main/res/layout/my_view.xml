@@ -48,8 +48,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="50dp"
-                        android:background="@drawable/icon_wx"
-                        android:src="@drawable/circle_head"/>
+                        android:background="@drawable/icon_wx"/>
 
                     <TextView
                         android:id="@+id/user_name"

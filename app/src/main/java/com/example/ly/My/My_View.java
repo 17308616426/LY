@@ -154,6 +154,7 @@ public class My_View {
                 mContext.startActivity(intent);
             }
         });
+
         //点击显示抽屉
         drawer.setOnClickListener(new View.OnClickListener() {
             @Override
