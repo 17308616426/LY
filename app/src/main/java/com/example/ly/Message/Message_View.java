@@ -1,6 +1,5 @@
 package com.example.ly.Message;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +7,11 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.ly.Message.Bean.MVA_Bean;
 import com.example.ly.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Message_View {
 
@@ -24,6 +27,8 @@ public class Message_View {
     private TextView tv_service;
     private ListView list;
     private final LayoutInflater mInflater;
+    private List<MVA_Bean> mva_beans;
+    private MVA_Bean bean;
 
 
     public Message_View(Context context){
@@ -66,6 +71,43 @@ public class Message_View {
         list = (ListView) view.findViewById(R.id.list);
 
 
+        Message_View_Adapter adapter = new Message_View_Adapter(mContext);
+        //传入数据
+        initData();
+        //把数组数据添加到adapter里面
+        adapter.setData(mva_beans);
+        //最后一步完成 数据添加到list列表里面去
+        list.setAdapter(adapter);
     }
 
+    private void initData() {
+        mva_beans = new ArrayList<MVA_Bean>();     //把MVA_Bean变成一个数组
+        for (int i = 0; i < 4; i++){
+            bean = new MVA_Bean();
+            bean.id =i + 1;
+            switch (i){
+                case 0:
+                    bean.iv_head = R.drawable.main_2;
+                    bean.tv_name = "张一";
+                    bean.tv_message = "今天天气很好";
+                    break;
+                case 1:
+                    bean.iv_head = R.drawable.main_2;
+                    bean.tv_name = "张二";
+                    bean.tv_message = "今天天气很好";
+                    break;
+                case 2:
+                    bean.iv_head = R.drawable.main_2;
+                    bean.tv_name = "张三";
+                    bean.tv_message = "今天天气很好";
+                    break;
+                case 3:
+                    bean.iv_head = R.drawable.main_2;
+                    bean.tv_name = "张四";
+                    bean.tv_message = "今天天气很好";
+                    break;
+            }
+            mva_beans.add(bean);    //把bean数据添加到数组里面
+        }
+    }
 }
